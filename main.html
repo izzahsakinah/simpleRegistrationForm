@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #ffffff;
+    }
+    .form-container {
+      background-color: #f2f2f2;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      border: 1px solid #d4d1d1;
+      border-radius: 10px;
+      
+    }
+    .form-header {
+      background-color: rgb(59, 106, 224);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      width: 180px; 
+    }
+    input, select {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      color: #888;
+    }
+    .submit-btn {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .ast {
+      color: red;
+    }
+    .placeholder-option {
+      color: #ebe9e9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <div class="form-header">Fill In Information Below</div>
+  <form id="myForm">
+    <div class="form-group">
+      <label for="idType">ID Type <span class="ast">*</span></label>
+      <select id="idType" required>
+        <option value="" disabled class="placeholder-option">Select Value</option>
+        <option>IC</option>
+        <option>Passport No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="fullName">Full Name <span class="ast">*</span></label>
+      <input type="text" id="fullName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="companyNo">Company Registration No/IC <span class="ast">*</span></label>
+      <input type="text" id="companyNo" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address <span class="ast">*</span></label>
+      <input type="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="address1">Address 1 <span class="ast">*</span></label>
+      <input type="text" id="address1" required>
+    </div>
+
+    <div class="form-group">
+      <label for="address2">Address 2 <span class="ast">*</span></label>
+      <input type="text" id="address2">
+    </div>
+
+    <div class="form-group">
+      <label for="address3">Address 3 (optional)</label>
+      <input type="text" id="address3">
+    </div>
+
+    <div class="form-group">
+      <label for="address4">Address 4 (optional)</label>
+      <input type="text" id="address4">
+    </div>
+
+    <div class="form-group">
+      <label for="state">State <span class="ast">*</span></label>
+      <select id="state" required>
+        <option value="" disabled selected class="placeholder-option">Select Value</option>
+        <option>Johor</option>
+        <option>Kedah</option>
+        <option>Kelantan</option>
+        <option>Melaka</option>
+        <option>Negeri Sembilan</option>
+        <option>Pahang</option>
+        <option>Penang</option>
+        <option>Perak</option>
+        <option>Perlis</option>
+        <option>Sabah</option>
+        <option>Sarawak</option>
+        <option>Selangor</option>
+        <option>Terengganu</option>
+        <option>Wilayah Persekutuan</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country <span class="ast">*</span></label>
+      <select id="country" required>
+        <option value="" disabled selected class="placeholder-option">Select Value</option>
+        <option>Malaysia</option>
+        <option>Singapore</option>
+        <option>Thailand</option>
+        <option>Indonesia</option>
+        <option>China</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="contactNumber">Contact Number <span class="ast">*</span></label>
+      <input type="text" id="contactNumber" required>
+      <button type="button" class="submit-btn" style="margin-left: 5px;" id="saveButton">Save</button>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
+<script src="validateRequired.js"></script>
+<script src="contactNumber.js"></script>
